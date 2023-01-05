@@ -1,6 +1,7 @@
 package application;
 
 import chessmatch.ChessBoard;
+import logic.GameLogic;
 import ui.Ui;
 
 public class Program {
@@ -10,6 +11,8 @@ public class Program {
 		cb.ChessBoard();
 		Ui ui = new Ui();
 		ui.showGame();
+		GameLogic gl = new GameLogic();
+		gl.Logic();
 		
 		
 	}
