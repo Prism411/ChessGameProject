@@ -1,11 +1,13 @@
 package chessmatch;
 
 import boardgame.Board;
-
+import boardgame.Piece;
+import boardgame.Position;
+import chessmatch.Colors;
 public class ChessBoard {
 	
 	private static Board board;
-	private int[][] chessboard;
+	private static ChessPiece[][] chessboard;
 	
 	public void ChessBoard() {
 		
@@ -13,23 +15,33 @@ public class ChessBoard {
 		System.out.println(board.getColumns());
 		System.out.println(board.getRows());
 		
-		chessboard = new int[board.getColumns()][board.getRows()];
+		chessboard = new ChessPiece[board.getColumns()][board.getRows()];
+		
+		Position pos = new Position(4,7);
+		ChessPiece piece = new ChessPiece(pos, Colors.BLACK);
 
-		for (int i = 0; i < 8; i++) {
+		int row = piece.getPosition().getRow();
+		int column = piece.getPosition().getColumn();
+		chessboard[row][column] = piece;
+	
+		//int row = piece.getPosition().getRow(); //Fileira
+		//int column = piece.getPosition().getColumn(); //Coluna
+		
+		for (int i = 0; i < chessboard.length; i++) {
 			System.out.println();
-			for (int j = 0; j < 8; j++) {
+			for (int j = 0; j < chessboard.length; j++) {
 				System.out.print(" " + chessboard[i][j] + " ");
 
 			}
 		}
 		
-
+		
 		
 		
 		
 		}
 
-	public int[][] getChessboard() {
+	public static ChessPiece[][] getChessboard() {
 		return chessboard;
 	}
 
