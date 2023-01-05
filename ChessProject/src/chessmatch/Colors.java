@@ -1,6 +1,8 @@
-package game;
+package chessmatch;
 
 public enum Colors {
+	
 	BLACK,
 	WHITE;
+
 }

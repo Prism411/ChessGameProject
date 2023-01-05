@@ -1,33 +1,10 @@
 package boardgame;
 
-import boardgame.Board;
-import boardgame.Position;
+import chessmatch.ChessPiece;
 
-	public class Piece {
+abstract class Piece extends ChessPiece {
 	
-	private Position position;
-	private Board board;
+	Position position;
 	
-	public Piece(Board board) {
-		this.board = board;
-		position = null;
-	}
 
-	public Position getPosition() {
-		return position;
-	}
-
-	public void setPosition(Position position) {
-		this.position = position;
-	}
-
-	public Board getBoard() {
-		return board;
-	}
-
-	public void setBoard(Board board) {
-		this.board = board;
-	}
-	
-	
 }

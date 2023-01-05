@@ -1,12 +1,13 @@
 package application;
-import game.ChessMatch;
 
+import chessmatch.ChessBoard;
 
- 
 public class Program {
 	public static void main(String[] args) {
-		ChessMatch cm = new ChessMatch();
-		System.out.println(cm);
-		cm.BoardMatch();
+
+		ChessBoard cb = new ChessBoard();
+		cb.ChessBoard();
+		
+		
 	}
 }
