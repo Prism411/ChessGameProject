@@ -8,5 +8,9 @@ public class Rook extends ChessPiece {
 		super(position, color);
 		// TODO Auto-generated constructor stub
 	}
+	
+	public String toString() {
+		return "R";
+	}
 
 }

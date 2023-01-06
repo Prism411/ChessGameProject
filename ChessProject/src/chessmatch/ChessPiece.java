@@ -28,10 +28,17 @@ public class ChessPiece extends Piece {
 	
 	
 	public boolean isValidMove(ChessPiece[][] board, Position source, Position destination) {
+		
 	    if (destination.getRow() < 0 || destination.getRow() >= board.length ||
-	        destination.getColumn() < 0 || destination.getColumn() >= board[0].length) {
+	        destination.getColumn() < 0 || destination.getColumn() >= board[0].length && source == destination) {
 	    	return false;
 	    }
-		return true;	
+	    if (destination != null) {
+	    	//capturar peça
+	    }
+	    	return true;	
 }
-}
+			
+		
+	}
+	
