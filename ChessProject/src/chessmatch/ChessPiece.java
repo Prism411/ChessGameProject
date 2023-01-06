@@ -1,44 +1,41 @@
 package chessmatch;
 
+import boardgame.Board;
 import boardgame.Piece;
 import boardgame.Position;
-import chessmatch.Colors;
 
-public class ChessPiece extends Piece {
-	
-	Colors color;
+public abstract class ChessPiece extends Piece {
 
-	
-	public ChessPiece(Position position, Colors color) {
+	private Color color;
+	private int moveCount;
+
+	public ChessPiece(Position position, Color color) {
 		super(position);
 		this.color = color;
 	}
 
-	public Colors getColor() {
+	public Color getColor() {
 		return color;
 	}
-
-	public void setColor(Colors color) {
-		this.color = color;
-	}
-
-	public String toString() {
-		return "B";
+	
+	public int getMoveCount() {
+		return moveCount;
 	}
 	
+	protected void increaseMoveCount() {
+		moveCount++;
+	}
+
+	protected void decreaseMoveCount() {
+		moveCount--;
+	}
+
+	public ChessPosition getChessPosition() {
+		return ChessPosition.fromPosition(position);
+	}
 	
-	public boolean isValidMove(ChessPiece[][] board, Position source, Position destination) {
-		
-	    if (destination.getRow() < 0 || destination.getRow() >= board.length ||
-	        destination.getColumn() < 0 || destination.getColumn() >= board[0].length && source == destination) {
-	    	return false;
-	    }
-	    if (destination != null) {
-	    	//capturar peça
-	    }
-	    	return true;	
+	protected boolean isThereOpponentPiece(Position position) {
+		ChessPiece p = (ChessPiece)getBoard().piece(position);
+		return p != null && p.getColor() != color;
+	}
 }
-			
-		
-	}
-	

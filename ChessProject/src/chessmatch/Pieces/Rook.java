@@ -1,10 +1,12 @@
-package chessmatch;
+package chessmatch.Pieces;
 
 import boardgame.Position;
+import chessmatch.ChessPiece;
+import chessmatch.Color;
 
 public class Rook extends ChessPiece {
 
-	public Rook(Position position, Colors color) {
+	public Rook(Position position, Color color) {
 		super(position, color);
 		// TODO Auto-generated constructor stub
 	}

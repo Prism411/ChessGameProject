@@ -3,7 +3,7 @@ package boardgame;
 
 public class Piece  {
 	
-	Position position;
+	protected Position position;
 
 	public Piece(Position position) {
 		this.position = position;

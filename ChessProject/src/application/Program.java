@@ -5,7 +5,6 @@ import java.util.Scanner;
 import boardgame.Position;
 import chessmatch.ChessBoard;
 import logic.GameLogic;
-import ui.Ui;
 
 public class Program {
 	public static void main(String[] args) {

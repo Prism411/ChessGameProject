@@ -6,6 +6,7 @@ import boardgame.Board;
 import boardgame.Piece;
 import boardgame.Position;
 import chessmatch.Colors;
+import chessmatch.Pieces.Rook;
 public class ChessBoard {
 	
 	private static Board board;
@@ -22,7 +23,7 @@ public class ChessBoard {
 		
 		int game = 1;
 		Position init = new Position(0,0);
-		Rook bRook = new Rook(init, Colors.BLACK);
+		Rook bRook = new Rook(init, Color.BLACK);
 		chessboard[0][0] = bRook;
 		
 		while (game == 1) {
